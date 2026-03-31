@@ -44,8 +44,12 @@
 
 ```
 Aurora-Singer/
-├── README.md                 # Este arquivo
+├── README.md                 # Este arquivo (documentação completa)
+├── requirements.txt          # Dependências Python (para pip install -r requirements.txt)
 ├── relatorio.ipynb          # Notebook principal com todo o código
+├── aurora_singer.py         # Script standalone executável
+├── telemetria_sintetica.csv # Dados de teste simulados
+├── relatorio.html          # Relatório gerado em HTML
 └── .gitignore              # Arquivos a ignorar no Git
 ```
 
@@ -63,6 +67,7 @@ Aurora-Singer/
 pandas >= 1.0.0
 numpy >= 1.18.0
 jupyter >= 1.0.0
+scikit-learn >= 0.24.0
 ```
 
 ---
@@ -71,15 +76,36 @@ jupyter >= 1.0.0
 
 ### Opção 1: Usando Jupyter Notebook (Recomendado)
 
-#### Passo 1: Instalar Dependências
+#### Passo 0: Preparar Ambiente Virtual (Windows)
 
-Abra um terminal e execute:
+Abra o PowerShell na pasta do projeto:
 
 ```bash
-pip install jupyter pandas numpy
+# Criar ambiente virtual
+python -m venv venv
+
+# Ativar ambiente virtual
+.\venv\Scripts\Activate
+```
+
+#### Passo 1: Instalar Dependências
+
+Com o ambiente virtual ativado, execute:
+
+```bash
+pip install --upgrade pip
+pip install jupyter pandas numpy scikit-learn
+```
+
+**Ou usando requirements.txt (recomendado para reprodutibilidade):**
+
+```bash
+pip install -r requirements.txt
 ```
 
 #### Passo 2: Iniciar Jupyter
+
+Com o ambiente virtual ativado, execute:
 
 ```bash
 jupyter notebook
@@ -106,11 +132,23 @@ Navegue até a pasta do projeto e clique em `relatorio.ipynb`
 4. Clique em **"Run All"** para executar todas as células
 5. Ou execute célula por célula pressionando ▶
 
-### Opção 3: Usar Google Colab (Online, sem instalação)
+### Opção 3: Script Direto em Python
+
+Para executar apenas o script `aurora_singer.py`:
+
+```bash
+# Com ambiente virtual ativado
+python aurora_singer.py
+```
+
+Isso executará uma simulação completa sem precisar de Jupyter.
+
+### Opção 4: Usar Google Colab (Online, sem instalação)
 
 1. Vá para https://colab.research.google.com
 2. Selecione **Upload** e envie `relatorio.ipynb`
 3. Execute as células normalmente
+4. ⚠️ **Nota**: Pode ser necessário instalar scikit-learn se não estiver disponível
 
 ---
 
@@ -262,6 +300,31 @@ Utliza rangos históricos de operação normal para identificar:
 - Mudanças rápidas de temperatura
 - Pressão instável
 - Falhas de integridade estrutural
+
+---
+
+## 🔧 Troubleshooting (Problemas Comuns)
+
+| Problema | Solução |
+|----------|---------|
+| `ModuleNotFoundError: No module named 'sklearn'` | Instale scikit-learn: `pip install scikit-learn` |
+| `ModuleNotFoundError: No module named 'jupyter'` | Instale Jupyter: `pip install jupyter` |
+| Porta 8888 já está em uso | Use uma porta diferente: `jupyter notebook --port 8889` |
+| Ambiente virtual não ativa no Windows | Use forward slashes: `.\venv\Scripts\Activate.ps1` (PowerShell) |
+| "pip: command not found" (macOS/Linux) | Use `pip3` em vez de `pip` se Python 3 não for padrão |
+| Google Colab falha ao carregar | Verifique sua conexão e tente recarregar a aba |
+
+### Desativar Ambiente Virtual
+
+Quando terminar, desative o ambiente virtual:
+
+```bash
+# Windows
+deactivate
+
+# macOS/Linux
+deactivate
+```
 
 ---
 

@@ -2,7 +2,8 @@
 
 **Projeto Integrador FIAP** | Curso de Ciência da Computação Aplicada  
 **Autor**: Edion  
-**Data**: Março de 2026
+**Data**: Março de 2026  
+**Repositório**: https://github.com/edionalberto/Aurora-Singer
 
 ---
 
@@ -29,29 +30,19 @@
 
 ---
 
-## 🎯 Requisitos Atendidos
-
-- ✅ **1.1**: Organização e descrição de telemetria
-- ✅ **1.2**: Algoritmo de verificação com pseudocódigo e fluxograma
-- ✅ **1.3**: Script em Python com simulação de leitura e verificação
-- ✅ **1.4**: Análise energética com cálculo de autonomia
-- ✅ **1.5**: Análise assistida por IA (classificação, anomalias, risco)
-- ✅ **1.6**: Reflexão crítica sobre ética, responsabilidade e sustentabilidade
-
----
-
 ## 📂 Estrutura do Projeto
 
-```
-Aurora-Singer/
-├── README.md                 # Este arquivo (documentação completa)
-├── requirements.txt          # Dependências Python (para pip install -r requirements.txt)
-├── relatorio.ipynb          # Notebook principal com todo o código
-├── aurora_singer.py         # Script standalone executável
-├── telemetria_sintetica.csv # Dados de teste simulados
-├── relatorio.html          # Relatório gerado em HTML
-└── .gitignore              # Arquivos a ignorar no Git
-```
+Arquivos principais:
+
+- `README.md` - documentação resumida e instruções de execução
+- `relatorio.md` - relatório de avaliação com análise crítica
+- `relatorio.ipynb` - notebook completo com código e resultados
+- `aurora_singer.py` - script executável de simulação de decolagem
+- `telemetria_sintetica.csv` - dados de telemetria sintéticos de teste
+- `requirements.txt` - dependências Python
+- `relatorio.html` - versão gerada em HTML do notebook
+- `.gitignore` - itens ignorados no versionamento
+
 
 ---
 
@@ -303,17 +294,6 @@ Utliza rangos históricos de operação normal para identificar:
 
 ---
 
-## 🔧 Troubleshooting (Problemas Comuns)
-
-| Problema | Solução |
-|----------|---------|
-| `ModuleNotFoundError: No module named 'sklearn'` | Instale scikit-learn: `pip install scikit-learn` |
-| `ModuleNotFoundError: No module named 'jupyter'` | Instale Jupyter: `pip install jupyter` |
-| Porta 8888 já está em uso | Use uma porta diferente: `jupyter notebook --port 8889` |
-| Ambiente virtual não ativa no Windows | Use forward slashes: `.\venv\Scripts\Activate.ps1` (PowerShell) |
-| "pip: command not found" (macOS/Linux) | Use `pip3` em vez de `pip` se Python 3 não for padrão |
-| Google Colab falha ao carregar | Verifique sua conexão e tente recarregar a aba |
-
 ### Desativar Ambiente Virtual
 
 Quando terminar, desative o ambiente virtual:
@@ -352,6 +332,12 @@ deactivate
 
 ### Ética e Responsabilidade
 A exploração espacial exige rigor técnico absoluto. Falhas em sistemas como Aurora-Singer têm consequências: perda de vidas humanas e recursos.
+
+- Verificação de segurança deve ser transparente. O projeto fortalece a cultura de "segurança em primeiro lugar" testando regras claras de pré-decolagem e atribuindo responsabilidade técnica.
+- Em contextos reais, o uso de IA para decisões de risco precisa de explicabilidade (XAI) para engenheiros e mission control entenderem por que uma recomendação é adotada ou rejeitada.
+- Atomicidade de decisões: cada leitura deve ser registrada e auditável. Logs de telemetria com carimbo de tempo são fundamentais para análises pós-evento e responsabilização.
+- Robustez contra falsos positivos/negativos: um falso negativo (aceitar decolagem insegura) é ameaça de vida; um falso positivo (negar decolagem segura) impacta custo e cronograma. Balancear sensibilidade e especificidade é requisito ético.
+- Inclusão de testes de falha e redundância: sistemas críticos precisam simular falhas de sensores e degradação em tempo real, não só condições ideais, para evitar vieses de validação.
 
 ### Impacto Social
 Enquanto a exploração espacial oferece benefícios (tecnologia, conhecimento), também gera riscos (custo de oportunidade, poluição, militarização).

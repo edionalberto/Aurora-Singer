@@ -39,10 +39,7 @@ Arquivos principais:
 - `relatorio.ipynb` - notebook completo com código e resultados
 - `aurora_singer.py` - script executável de simulação de decolagem
 - `telemetria_sintetica.csv` - dados de telemetria sintéticos de teste
-- `requirements.txt` - dependências Python
-- `relatorio.html` - versão gerada em HTML do notebook
 - `.gitignore` - itens ignorados no versionamento
-
 
 ---
 
@@ -88,11 +85,6 @@ pip install --upgrade pip
 pip install jupyter pandas numpy scikit-learn
 ```
 
-**Ou usando requirements.txt (recomendado para reprodutibilidade):**
-
-```bash
-pip install -r requirements.txt
-```
 
 #### Passo 2: Iniciar Jupyter
 
@@ -235,18 +227,6 @@ O sistema de análise inteligente fornece:
 
 ---
 
-## 📈 Estatísticas do Projeto
-
-| Métrica | Valor |
-|---------|-------|
-| Linhas de Código | ~400 |
-| Classes Implementadas | 3 |
-| Cenários de Teste | 5 |
-| Parâmetros Monitorados | 6 |
-| Pontos de Verificação | 6 |
-
----
-
 ## 🔍 Estrutura do Notebook
 
 | Seção | Descrição |
@@ -308,26 +288,6 @@ deactivate
 
 ---
 
-## ⚠️ Limitações Conhecidas
-
-1. **Dados Simulados**: O projeto usa dados fictícios para demonstração
-2. **Consumo Constante**: Assume consumo linear de energia (real seria variável)
-3. **Sem Persistência**: Dados não são salvos entre execuções
-4. **Análise Simplificada**: IA usa heurísticas, não machine learning
-
----
-
-## 🚀 Melhorias Futuras
-
-- [ ] Integração com banco de dados real
-- [ ] Gráficos visualizando tendências de parâmetros
-- [ ] Exportação de relatórios em PDF
-- [ ] Dashboard interativo com streamlit
-- [ ] Machine learning para predição de falhas
-- [ ] API REST para integração com outros sistemas
-
----
-
 ## 📚 Reflexão Crítica - Pontos-Chave
 
 ### Ética e Responsabilidade
@@ -346,26 +306,5 @@ Enquanto a exploração espacial oferece benefícios (tecnologia, conhecimento),
 É imperativo que a exploração espacial futura seja feita de forma sustentável, com foco em combustíveis limpos, remoção de lixo espacial e responsabilidade ambiental.
 
 ---
-
-## 📄 Licença
-
-Este projeto é fornecido como trabalho acadêmico para FIAP.
-
----
-
-## 👤 Autor
-
-**Edion**  
-FIAP - Curso de Ciência da Computação Aplicada  
-Março de 2026
-
----
-
-## 📞 Suporte
-
-Para dúvidas sobre o projeto:
-- Verifique a documentação no notebook
-- Consulte os comentários no código
-- Reexecute as células de teste
 
 **Última Atualização**: Março 31, 2026

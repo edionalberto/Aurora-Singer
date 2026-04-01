@@ -2,7 +2,7 @@
 
 Projeto de verificação de telemetria para decolagem de nave espacial. Analisa condições operacionais, decide status segurança, calcula autonomia e detecta anomalias via IA.
 
-## 📌 Prints da execução
+## 📌 Evidências da execução
 
 ```text
 === RELATÓRIO DE PRÉ-DECOLAGEM ===
@@ -18,9 +18,8 @@ Autonomia estimada após perdas: 27.20 min
 
 ## 💻 Instruções de execução
 
-1. `pip install -r requirements.txt`
-2. `python aurora_singer.py`
-3. (opcional) `jupyter notebook` e abrir `relatorio.ipynb`
+1. `python aurora_singer.py`
+2. (opcional) `jupyter notebook` e abrir `relatorio.ipynb`
 
 ---
 
@@ -48,12 +47,6 @@ Autonomia estimada após perdas: 27.20 min
 - Python 3.7+
 - pip
 
-### Instalação
-
-```bash
-pip install -r requirements.txt
-```
-
 ### Executar
 
 ```bash
@@ -72,6 +65,7 @@ jupyter notebook
 
 - `README.md`
 - `aurora_singer.py`
+- `relatorio.md`
 - `relatorio.ipynb`
 - `telemetria_sintetica.csv`
 
